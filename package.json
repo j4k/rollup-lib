@@ -1,0 +1,55 @@
+{
+  "name": "my-library-name",
+  "version": "0.0.1",
+  "description": "My library description",
+  "main": "dist/my-library-name.js",
+  "module": "dist/my-library-name.mjs",
+  "jsnext:main": "dist/my-library-name.mjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j4k/my-library-name.git"
+  },
+  "homepage": "https://j4k.github.io/my-library-name",
+  "scripts": {
+    "test": "NODE_ENV=testing jest",
+    "build": "NODE_ENV=production rollup -c",
+    "cover": "yarn test -- --coverage",
+    "dev": "NODE_ENV=development nodemon ./src/index.js --exec babel-node -e js"
+  },
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "keywords": [
+    "node",
+    "rollup",
+    "babel"
+  ],
+  "author": "j4k",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-latest": "^6.24.0",
+    "babelrc-rollup": "^3.0.0",
+    "coveralls": "^2.12.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "jest-cli": "^19.0.2",
+    "nodemon": "^1.11.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-flow": "^1.1.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

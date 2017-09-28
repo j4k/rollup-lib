@@ -1,0 +1,22 @@
+{
+  "env": {
+    "testing": {
+      "presets": ["env"],
+      "plugins": ["transform-flow-strip-types"]
+    },
+    "development": {
+      "presets": ["env"],
+      "plugins": ["transform-flow-strip-types"]
+    },
+    "production": {
+      "presets": [
+        ["latest", {
+          "es2015": {
+            "modules": false
+          }
+        }]
+      ],
+      "plugins": ["external-helpers", "transform-flow-strip-types"]
+    }
+  }
+}
